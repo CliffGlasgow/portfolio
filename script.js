@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(type, 1000);
 
-    document.querySelector('a[href^=#]').forEach(anchor => {
+    document.querySelectorAll('a[href^=#]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const textarea = document.getElementById('message-box');
     const label = document.getElementById('message');
     
-    textarea.addEventListener('blur', function () {
+    textarea.addEventListener('input', function () {
         if (textarea.value.trim() !=="") {
             label.style.bottom = '85px';
         } else {
