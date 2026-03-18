@@ -587,6 +587,96 @@ footer a {
   transform: translateY(-1px);
 }
 
+/* ==== PROJECTS PAGE ==== */
+.project-hero {
+    max-width: 1100px;
+    margin: 0 auto 150px auto;
+    padding: 140px 40px 80px;
+}
+
+.project-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.project-hero h2::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: #d30000;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+/* == Project Card == */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 0, 0, 0.4);
+}
+
+.project-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* == Text == */
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.tech {
+    margin-bottom: 20px;
+}
+
+.tech span {
+    display: inline-block;
+    background: rgba(255, 0, 0, 0.1);
+    color: #d30000;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border-radius: 6px;
+    font-size: .85rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    font-size: .9rem;
+    border: 1px solid #d30000;
+    color: #d30000;
+    transition: .3s ease;
+}
+
+.project-links a:hover {
+    background: #d30000;
+    color: #0c0f17;
+}
+
 /* ==== CONTACT PAGE ==== */
 .contact-hero {
     margin-bottom: 400px;
@@ -825,6 +915,22 @@ textarea {
         height: 250px;
     }
 
+    .project {
+        flex-direction: column;
+        text-align: center;
+        height: 65vh;
+        padding: 10px 5px;
+    }
+
+    .project-hero h2 {
+        text-align: center;
+    }
+
+    .project-hero h2::after {
+        left: 35%;
+        transform: translateY(-50%);
+    }
+
     .contact-box {
         flex-direction: column;
         text-align: center;
@@ -834,9 +940,9 @@ textarea {
     }
 
     .footer-social a {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
   }
 }
 
@@ -896,5 +1002,4 @@ textarea {
         padding: 100px 20px 40px;
         height: 70vh;
     }
-
 }
